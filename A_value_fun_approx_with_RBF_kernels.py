@@ -32,9 +32,8 @@ from tqdm import tqdm
 # fit_intercept=True,
 # learning_rate='invscaling',  # the learning decreases with 1/T
 ###############################################################################
-# in this simulations we first generate the samples, scale them and then ...
-# ... perform the RL. Hence the states (observations) are generated ...
-# ... in the __init__ of the class FeatureTransformer.
+# in this simulations we first generate some samples, learns an scaler on them and then ...
+# ... perform RL on the new samples as they arrived. Hence the states (observations).
 class FeatureTransformer:
   def __init__(self, env, n_components=500):
     # generate states (observations)
@@ -93,6 +92,9 @@ class Model:
     X_higher_dimension_representation_of_state_s = self.feature_transformer.transform([s])
     list_Q_values_for_state_s_and_different_actions = []
     for curr_action_index in range(len(self.SGDRegressors_approximate_Q_values_for_different_actions)):
+      # for each action find the current estimate of the Q-value for each action ...
+      # ... using the SGDRegressors, which are linear functions; however, we use ...
+      # ... the extended feature representation instead of the original representation!
       curr_SGDRegressor_approximate_Q_values_for_curr_action = self.SGDRegressors_approximate_Q_values_for_different_actions[curr_action_index]
       curr_reward_for_curr_action_at_state_s = curr_SGDRegressor_approximate_Q_values_for_curr_action.predict(X_higher_dimension_representation_of_state_s)[0]
       list_Q_values_for_state_s_and_different_actions.append(curr_reward_for_curr_action_at_state_s)
