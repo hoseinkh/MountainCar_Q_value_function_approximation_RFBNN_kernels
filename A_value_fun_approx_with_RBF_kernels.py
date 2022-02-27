@@ -119,7 +119,7 @@ class Model:
     else:
       return np.argmax(self.predict(s))
 ###############################################################################
-# returns a list of states_and_rewards, and the total reward
+#
 def play_one(model, env, eps, discount_rate):
   observation = env.reset()
   done = False
