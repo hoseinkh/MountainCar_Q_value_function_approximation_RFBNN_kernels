@@ -46,7 +46,7 @@ The general form of the Mountain car is shown in the following figure.
 
 
 <p float="left">
-  <img src="/figs/Fig-project/Mountain_Car_general_form.png" width="450" />
+  <img src="/figs/Mountain_Car_general_form.png" width="450" />
 </p>
 
 
@@ -58,7 +58,7 @@ After training the model, the results are shown as the follows:
 The performance of the optimal policy:
 
 <p float="left">
-  <img src="/figs/Fig-project/Mountain_Car_optimal_policy_Q_val_apprx_RBF_kernal.gif" width="450" />
+  <img src="/figs/Mountain_Car_optimal_policy_Q_val_apprx_RBF_kernal.gif" width="450" />
 </p>
 
 
@@ -66,7 +66,7 @@ The performance of the optimal policy:
 Average total reward over different episodes:
 
 <p float="left">
-  <img src="/figs/Fig-project/Mountain_Car_Average_Total_Reward_Q_val_fun_approx.png" width="450" />
+  <img src="/figs/Mountain_Car_Average_Total_Reward_Q_val_fun_approx.png" width="450" />
 </p>
 
 
@@ -74,7 +74,7 @@ Average total reward over different episodes:
 And the average # steps to reach to the top of the mountain at different state-action pairs (which is practically $(-Q^*(s,a))$) is shown in the following figure:
 
 <p float="left">
-  <img src="/figs/Fig-project/Mountain_Car_Num_steps_to_Reach_Mountain_Q_val_fun_approx.png" width="450" />
+  <img src="/figs/Mountain_Car_Num_steps_to_Reach_Mountain_Q_val_fun_approx.png" width="450" />
 </p>
 
 
