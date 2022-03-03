@@ -186,8 +186,6 @@ if __name__ == '__main__':
   discount_rate = 0.99
   #
   if True:
-    # filename = os.path.basename(__file__).split('.')[0]
-    # monitor_dir = './' + filename + '_' + str(datetime.now())
     monitor_dir = os.getcwd() + "/videos/" + str(datetime.now())
     env = wrappers.Monitor(env, monitor_dir)
   #

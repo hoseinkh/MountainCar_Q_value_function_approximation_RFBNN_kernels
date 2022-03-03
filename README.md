@@ -1,6 +1,6 @@
 # MountainCar_Q_value_function_approximation_RFBNN_kernels
 
- We use tabular state-action value functions (Q-values) to find the optimal policy for controlling a Cart Pole.
+We use linear function approximators for predicting the state-action value functions (Q-values) to find the optimal policy for controlling a Cart Pole. In order to improve the performance of the predictions we use the RBF kernels to increase the feature space from 2 to 2000.
 
 <br />
 
